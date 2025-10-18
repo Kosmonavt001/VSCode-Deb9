@@ -141,4 +141,10 @@ sudo chmod -R 755 /home/student/.config
 
 echo "✅ Права исправлены! Теперь зайди под student и запусти:"
 echo "code"
+
+sudo rm -rf /home/student/.config/Code
+sudo mkdir -p /home/student/.config/Code/Backups
+sudo mkdir -p /home/student/.vscode/extensions
+sudo chown -R student:student /home/student/.config /home/student/.vscode
+sudo chmod -R 755 /home/student/.config /home/student/.vscode
 ```
