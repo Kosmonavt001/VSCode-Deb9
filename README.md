@@ -135,4 +135,10 @@ echo "✅ Папка Code пересоздана с правильными пр�
 echo "code"
 
 ls -ld /home/student/.config /home/student/.config/Code /home/student/.vscode /run/user/1002
+
+sudo chown -R student:student /home/student/.config
+sudo chmod -R 755 /home/student/.config
+
+echo "✅ Права исправлены! Теперь зайди под student и запусти:"
+echo "code"
 ```
