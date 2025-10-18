@@ -1,4 +1,4 @@
-# Solll
+# VSCode-Deb9
 
 ### Установка VS CODE на Debain 9
 ``` bash
