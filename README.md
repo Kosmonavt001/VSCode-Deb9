@@ -104,4 +104,14 @@ echo ">>> Готово!"
 echo "Теперь пользователь $STUDENT_USER может запустить VS Code:"
 echo "    code"
 echo "или через меню -> Программы -> Разработка -> Visual Studio Code"
+
+sudo mkdir -p /home/student/.config/Code
+sudo mkdir -p /home/student/.vscode/extensions
+
+sudo chown -R student:student /home/student/.config /home/student/.vscode /home/student /run/user/1002 2>/dev/null || true
+
+sudo chmod -R u+w /home/student/.config /home/student/.vscode /home/student /run/user/1002 2>/dev/null || true
+
+echo "✅ Права исправлены. Теперь попробуй запустить VS Code под пользователем student командой:"
+echo "code"
 ```
