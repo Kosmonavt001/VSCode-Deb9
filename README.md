@@ -133,4 +133,6 @@ sudo chmod -R 755 /home/student/.config /home/student/.vscode /home/student /run
 
 echo "✅ Папка Code пересоздана с правильными правами. Теперь войди под student и запусти:"
 echo "code"
+
+ls -ld /home/student/.config /home/student/.config/Code /home/student/.vscode /run/user/1002
 ```
