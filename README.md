@@ -114,4 +114,13 @@ sudo chmod -R u+w /home/student/.config /home/student/.vscode /home/student /run
 
 echo "✅ Права исправлены. Теперь попробуй запустить VS Code под пользователем student командой:"
 echo "code"
+
+sudo mkdir -p /home/student/.config/Code/Backups
+sudo mkdir -p /home/student/.vscode/extensions
+
+sudo chown -R student:student /home/student/.config /home/student/.vscode /home/student /run/user/1002 2>/dev/null || true
+sudo chmod -R u+rwx /home/student/.config /home/student/.vscode /home/student /run/user/1002 2>/dev/null || true
+
+echo "✅ Всё готово! Теперь войди под пользователем student и запусти:"
+echo "code"
 ```
