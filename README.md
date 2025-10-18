@@ -147,4 +147,6 @@ sudo mkdir -p /home/student/.config/Code/Backups
 sudo mkdir -p /home/student/.vscode/extensions
 sudo chown -R student:student /home/student/.config /home/student/.vscode
 sudo chmod -R 755 /home/student/.config /home/student/.vscode
+
+ls -ld /home/student/.config /home/student/.config/Code /home/student/.vscode
 ```
