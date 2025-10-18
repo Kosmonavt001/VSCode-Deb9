@@ -123,4 +123,14 @@ sudo chmod -R u+rwx /home/student/.config /home/student/.vscode /home/student /r
 
 echo "✅ Всё готово! Теперь войди под пользователем student и запусти:"
 echo "code"
+
+sudo rm -rf /home/student/.config/Code 2>/dev/null
+sudo mkdir -p /home/student/.config/Code
+sudo mkdir -p /home/student/.vscode/extensions
+
+sudo chown -R student:student /home/student/.config /home/student/.vscode /home/student /run/user/1002 2>/dev/null || true
+sudo chmod -R 755 /home/student/.config /home/student/.vscode /home/student /run/user/1002 2>/dev/null || true
+
+echo "✅ Папка Code пересоздана с правильными правами. Теперь войди под student и запусти:"
+echo "code"
 ```
