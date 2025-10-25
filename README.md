@@ -18,7 +18,7 @@ Categories=Development;IDE;
 EOF
 chmod +x ~/.local/share/applications/code-portable.desktop
 ADMIN_USER="admin1"
-STUDENT_USER="student1"
+STUDENT_USER="student"
 sudo -u $STUDENT_USER mkdir -p /home/$STUDENT_USER/.config
 sudo -u $STUDENT_USER mkdir -p /home/$STUDENT_USER/.vscode
 if [ -d /home/$ADMIN_USER/.config/Code ]; then
