@@ -52,6 +52,18 @@ sudo mkdir -p /home/student/.vscode/extensions
 sudo chown -R student:student /home/student/.config /home/student/.vscode
 sudo chmod -R 755 /home/student/.config /home/student/.vscode
 ls -ld /home/student/.config /home/student/.config/Code /home/student/.vscode
+# 1. Жестко меняем владельца всех папок юзера student
+sudo chown -R student:student /home/student/.config
+sudo chown -R student:student /home/student/.vscode
+sudo chown -R student:student /home/student/.local
+
+# 2. Выставляем права на чтение, запись и выполнение (775)
+sudo chmod -R 775 /home/student/.config
+sudo chmod -R 775 /home/student/.vscode
+
+# 3. Самое важное: если папка Code уже создана с ошибками, лучше её пересоздать чисто от имени student
+sudo rm -rf /home/student/.config/Code
+sudo -u student mkdir -p /home/student/.config/Code
 ```
 
 Запуск:
