@@ -64,3 +64,26 @@ sudo deluser student sudo
 echo "🔒 Права отозваны. Установка завершена."
 
 ```
+
+
+``` bash
+# 1. Удаляем основную программу
+sudo rm -rf /opt/VSCode-linux-x64
+
+# 2. Удаляем симлинк
+sudo rm -f /usr/local/bin/code
+
+# 3. Удаляем ярлык на рабочем столе студента
+sudo rm -f /home/student/Desktop/vscode.desktop
+
+# 4. Удаляем все конфиги и данные (самое важное!)
+sudo rm -rf /home/student/.config/Code
+sudo rm -rf /home/student/.vscode
+sudo rm -rf /home/student/.cache/Code
+
+# 5. Удаляем временные файлы (на всякий случай)
+sudo rm -rf /tmp/.org.chromium.Chromium*
+sudo rm -rf /run/user/1002/Code*
+
+echo "✅ VS Code полностью удалён."
+```
