@@ -27,7 +27,19 @@ chmod +x ~/Desktop/vscode.desktop
 # 3. Создаем папки конфигов (теперь они сразу будут с правами студента)
 mkdir -p ~/.config/Code
 mkdir -p ~/.vscode/extensions
+# 1. Исправляем права на основные папки
+sudo chown -R student:student \~/.config/Code
+sudo chown -R student:student \~/.vscode
 
+# 2. Создаём все нужные подпапки вручную
+mkdir -p \~/.config/Code/{Backups,User,logs,CachedData}
+mkdir -p \~/.vscode/extensions
+
+# 3. Даём полные права
+chmod -R 755 \~/.config/Code
+chmod -R 755 \~/.vscode
+
+echo "✅ Права исправлены"
 echo "✅ Всё готово, VS Code стоит. Можешь проверять запуск." 
 ```
 
