@@ -38,7 +38,22 @@ mkdir -p \~/.vscode/extensions
 # 3. Даём полные права
 chmod -R 755 \~/.config/Code
 chmod -R 755 \~/.vscode
+# Смотрим, кто владеет папками
+ls -ld \~/.config/Code \~/.config \~/.vscode
 
+# Исправляем владельца
+sudo chown -R student:student \~/.config/Code
+sudo chown -R student:student \~/.vscode
+
+# Создаём все нужные папки
+mkdir -p \~/.config/Code/{Backups,User,logs,CachedData,CrashReports}
+mkdir -p \~/.vscode/extensions
+
+# Даём правильные права
+chmod -R u+rwX \~/.config/Code
+chmod -R u+rwX \~/.vscode
+
+echo "✅ Права исправлены. Теперь попробуй запустить VS Code."
 echo "✅ Права исправлены"
 echo "✅ Всё готово, VS Code стоит. Можешь проверять запуск." 
 ```
